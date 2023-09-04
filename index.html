@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>Custom Navbar</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="toggle-button" id="toggle-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Your content goes here -->
+    <div class="tabs">
+        <button class="tab-btn active" data-tab="tab1">Tab 1</button>
+        <button class="tab-btn" data-tab="tab2">Tab 2</button>
+        <button class="tab-btn" data-tab="tab3">Tab 3</button>
+    </div>
+    <div id="tab1" class="tab-content active">
+        <h2>Tab 1 Content</h2>
+        <p>This is the content for Tab 1.</p>
+    </div>
+    <div id="tab2" class="tab-content">
+        <h2>Tab 2 Content</h2>
+        <p>This is the content for Tab 2.</p>
+    </div>
+    <div id="tab3" class="tab-content">
+        <h2>Tab 3 Content</h2>
+        <p>This is the content for Tab 3.</p>
+    </div>
+
+</body>
+</html>
