@@ -1,123 +1,80 @@
-/* Reset some default styles */
-body, ul {
+body{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Style the header and navbar */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
+:root {
+    --dark:black ;
+    --medium : rgb(180, 9, 9);
+  }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-/* Style the toggle button (hamburger menu) */
-.toggle-button {
-    display: none; /* Hide by default on larger screens */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-/* Style the navigation links */
-.nav-links {
+  li {
     list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-right: 20px;
-}
-
-.nav-links a {
+  }
+  a {
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
+  }
+  
+
+  
+
+  /* Navbar Start */
+ 
+  a:hover {
+    color: var(--medium) !important;
+  }
+
+  .active-nav{
+    font-weight: bold !important;
+    color:var(--medium) !important;
+  }
+.logo {
+    color: var(--dark) !important;
+    font-size:2rem !important;
 }
-
-.nav-links a:hover {
-    color: #ff9900;
+.nav-item > a {
+    color: var(--dark);
 }
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-    .toggle-button {
-        display: flex; /* Show toggle button on mobile screens */
-    }
-
-    .nav-links {
-        display: none; /* Hide navigation links by default on mobile */
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex; /* Show navigation links when active */
-    }
-
-    .navbar.active .bar:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    .navbar.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar.active .bar:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
-    }
-}
+  .nav-item > a:active{
+    color: var(--medium) !important;
+  } 
 
 
-
-.tabs {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.tab-btn {
-    background-color: #f0f0f0;
+  .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
     border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    outline: none;
-    border-radius: 5px;
-}
-
-.tab-btn.active {
-    background-color: #333;
-    color: #fff;
-}
-
-.tab-content {
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
     display: none;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.tab-content.active {
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
     display: block;
-}
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+
+  /* Navbar End */
