@@ -1,64 +1,65 @@
-body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --dark:black ;
-    --medium : rgb(180, 9, 9);
-  }
+  --dark: rgb(117, 116, 116)  ;
+  --medium: #dc3545;
+}
 
-  li {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-  }
-  
+li {
+  list-style: none;
+}
 
-  
+a {
+  text-decoration: none;
+}
 
-  /* Navbar Start */
- 
-  a:hover {
-    color: var(--medium) !important;
-  }
 
-  .active-nav{
-    font-weight: bold !important;
-    color:var(--medium) !important;
-  }
+
+
+/* Navbar Start */
+
+a:hover {
+  color: var(--medium) !important;
+}
+
+.active-nav {
+  font-weight: bold !important;
+  color: var(--medium) !important;
+}
+
 .logo {
-    color: var(--dark) !important;
-    font-size:2rem !important;
+  color: var(--dark) !important;
+  font-size: 1.5rem !important;
 }
-.nav-item > a {
-    color: var(--dark);
+
+.nav-item>a {
+  color: var(--dark);
+  font-size: 12px !important;
+  letter-spacing: 2px !important;
 }
-  .nav-item > a:active{
-    color: var(--medium) !important;
-  } 
+
+.nav-item>a:active {
+  color: var(--medium) !important;
+}
 
 
-  .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-  }
-  
-  .dropdown {
+ /* .dropdown {
     position: relative;
     display: inline-block;
+  } */
+  .dropdown-menu{
+    border-radius: 0 !important;
+   z-index: -1; 
   }
-  
-  .dropdown-content {
+  .dropdown-content-service {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 300px !important;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -69,12 +70,215 @@ body{
     text-decoration: none;
     display: block;
   }
-  
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+   
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
+.nav-btn-box{
+  background-color: var(--medium);
+  /* width: 20%; */
+  text-align: center;
   
 
-  /* Navbar End */
+}
+
+/* Navbar End */
+
+
+/* Hero Section */
+.hero-section {
+  height: 90vh;
+  position: relative;
+}
+
+video {
+  object-fit: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background: rgba(255, 242, 242, 0.6);
+}
+
+.hero-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 30%;
+  color: #fff;
+  z-index: 3;
+  display: block;
+  align-content: space-around;
+}
+.hero-heading{
+  font-size: 4.5em;
+  font-weight: 700;
+  color: black;
+}
+.hero-sub-heading{
+  font-size: 2.5em;
+  font-weight: 600;
+  color: var(--medium);  
+}
+.hero-button > button {
+  margin-top: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.btn-1 {
+  background-color: var(--medium);
+}
+.btn-2{
+  background-color: black
+}
+
+/* For Large Size Laptops & Mac Book */
+@media(max-width: 1600px){
+ 
+} 
+
+/* For Medium Size Laptops */
+@media(max-width: 1441px){
+}
+
+/* For Small Size Laptops */
+@media(max-width: 1300px){
+  .hero-heading{
+    font-size: 4em;
+    /* font-weight: 700; */
+  }
+  .hero-sub-heading{
+    font-size: 2em;
+    /* font-weight: 600; */
+  }
+}
+
+/* For Ipad Pro */
+@media(max-width: 1024px){
+  .hero-heading{
+    font-size: 2em;
+    /* font-weight: 600; */
+  }
+  .hero-sub-heading{
+    font-size: 1.5em;
+    /* font-weight: 500; */
+  }
+.hero-brands{
+  overflow: hidden;
+  }
+}
+
+/* For Ipad Mini */
+@media(max-width: 768px){}
+
+/* For Mobile */
+@media(max-width: 575px){
+  .hero-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important ;
+  }
+  .hero-button > button {
+    width: 90%;
+  }
+}
+
+.hero-brands{
+  position: relative;
+  top: 20px;
+  /* margin-top: 20px; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+ 
+}
+.hero-brands > img {
+  width: 175px;
+  height: 50px;
+  margin: 0 15px;
+  
+}
+
+/* Hero Section */
+
+/* Service Section */
+.service-section{
+  text-align: center;
+  margin:40px 0;
+}
+.service-hr {
+  width: 80px;
+  margin: 0 auto;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+
+
+.service-card {
+  background-color: transparent !important;
+  /* width: 280px; */
+  height: 350px;
+  perspective: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.161);
+}
+
+.service-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 3px 6px rgba(0,0,0,.161);
+  border-radius: 20px;
+
+}
+
+.service-card:hover .service-card-inner {
+  transform: rotateY(180deg);
+}
+
+.service-card-front, .service-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.service-card-front {
+  /* background-color: #bbb; */
+  color: black;
+  text-align: left;
+}
+
+.service-card-back {
+  background-color: var(--medium);
+  color: white;
+  transform: rotateY(180deg);
+}
